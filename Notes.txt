@@ -1,0 +1,7 @@
+SPA - Single page application
+PWA - progressive web application
+
+
+tsc filename.ts -w => watch mode
+
+tsc filename.ts -t "ES6" => Targeting to create ES6 js file
