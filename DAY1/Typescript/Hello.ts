@@ -9,3 +9,11 @@ console.log(a);
 function Add(x: number, y: number): number {
     return x + y;
 }
+
+//destructuring
+let cars = ["BMW", "AUDI"];
+
+let [firstc, secondc] = cars;
+
+console.log(firstc, secondc);
+
