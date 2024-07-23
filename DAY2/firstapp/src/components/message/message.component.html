@@ -1,3 +1,21 @@
-<img [src] = "messageDetails.imgUrl" alt=""/>
-<h1>{{ messageDetails.msg }} From: {{ messageDetails.from }} To: {{ messageDetails.to }}</h1>
-<hr />
+<!-- <img [src]="messageDetails.imgUrl" alt="" />
+<h1>
+  {{ messageDetails.msg }} From: {{ messageDetails.from }} To:
+  {{ messageDetails.to }}
+</h1>
+<hr /> -->
+<div class="card">
+    <img
+      [src]="messagedetails.imageurl"
+      class="card-img-top"
+      alt=""
+      height="200px"
+      width="250px"
+    />
+  
+    <div class="card-body">
+      <h5 class="card-title">{{ messagedetails.msg }}</h5>
+      <p class="card-text">From : {{ messagedetails.from }}</p>
+      <p class="card-text">To : {{ messagedetails.to }}</p>
+    </div>
+  </div>

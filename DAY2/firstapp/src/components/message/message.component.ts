@@ -9,5 +9,5 @@ export class Message {
   // @Input() from: string = '';
   // @Input() to: string = '';
 
-  @Input() messageDetails = { msg: '', from: '', to: '' , imgUrl:''};
+  @Input() messagedetails = { msg: '', from: '', to: '' , imageurl:''};
 }

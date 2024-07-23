@@ -12,7 +12,7 @@ export class AppComponent {
     msg: 'Hello guys',
     from: '1',
     to: '10',
-    imgUrl:
+    imageurl:
       'https://png.pngtree.com/png-vector/20190330/ourmid/pngtree-vector-picture-icon-png-image_890152.jpg',
   };
 
@@ -21,13 +21,22 @@ export class AppComponent {
       msg: 'Hi',
       from: '2',
       to: '20',
-      imgUrl: '',
+      imageurl:
+      'https://png.pngtree.com/png-vector/20190330/ourmid/pngtree-vector-picture-icon-png-image_890152.jpg',
     },
     {
       msg: 'guys',
       from: '3',
       to: '30',
-      imgUrl: '',
+      imageurl: 
+      'https://png.pngtree.com/png-vector/20190330/ourmid/pngtree-vector-picture-icon-png-image_890152.jpg',
+    },
+    {
+      msg: 'IT me',
+      from: '4',
+      to: '40',
+      imageurl: 
+      'https://png.pngtree.com/png-vector/20190330/ourmid/pngtree-vector-picture-icon-png-image_890152.jpg',
     },
   ];
 }
