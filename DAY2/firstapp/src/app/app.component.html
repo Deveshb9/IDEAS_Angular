@@ -1,0 +1,10 @@
+<app-message [messageDetails]="firstMessage"></app-message>
+<app-message
+  [messageDetails]="{ msg: 'Hey', from: 'Devesh', to: 'DB9', imgUrl: '' }"
+></app-message>
+
+<div *ngFor="let m of messageDetailsList">
+  <app-message [messageDetails]="m"></app-message>
+</div>
+<!-- <app-message msg="Hello" from="B" to="C"></app-message>
+<app-message msg="Hi" from="Blue" to="Red"></app-message> -->

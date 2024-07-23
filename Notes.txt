@@ -1,14 +1,32 @@
+====DAY 1========================================
 SPA - Single page application
 PWA - progressive web application
 
-
 tsc filename.ts -w => watch mode
-
 tsc filename.ts -t "ES6" => Targeting to create ES6 js file
 
 anonymus function looses the context
 arrow function binds the context 
 
-spread operators
+ES6 features => arrow functions, spread operators, destructuring array
 
-destructuring array
+====DAY 2========================================
+ANGULAR -> Web framework
+
+ng new <app_name> --no-standalone
+
+ng serve / npm start => start the application
+
+**Decorators in angular
+
+When components used across then add list of modules to declarations under @NgModule
+
+you can use <input/> instead of <input></input>
+
+interpolation => {{}}
+
+@Input in angular
+
+property binding syntax example => <img [src] = "imageurl" alt=""/>
+for string we use interpolation
+property binding is used instead of interpolation so that dynamic values can also be assigned to the variable
