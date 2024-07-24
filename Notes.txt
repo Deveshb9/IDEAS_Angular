@@ -29,4 +29,8 @@ interpolation => {{}}
 
 property binding syntax example => <img [src] = "imageurl" alt=""/>
 for string we use interpolation
-property binding is used instead of interpolation so that dynamic values can also be assigned to the variable
+property binding is used instead of interpolation so that dynamic values can also 
+be assigned to the variable
+
+====DAY 3========================================
+create components => ng g c components/<component_name>

@@ -6,12 +6,12 @@ import { ProductModel } from '../../models/product.model';
   templateUrl: './product.component.html',
 })
 export class Product {
-  @Input() productdetails: ProductModel = {
-    id: 0,
-    title: 'NA',
-    price: 0,
-    rating: 0.0,
-    likes: 0,
-    imageurl: 'NA',
-  };
+  @Input() productdetails: ProductModel = new ProductModel(
+    0,
+    'NA',
+    0,
+    0.0,
+    0,
+    'NA'
+  );
 }
