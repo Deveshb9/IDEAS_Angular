@@ -1,4 +1,4 @@
-<div class="card">
+<div [ngClass]="{ card: true, addtocart: isAddedToCart }">
   <img
     [src]="productdetails.imageurl"
     class="card-img-top"
@@ -9,11 +9,14 @@
 
   <div class="card-body">
     <h5 class="card-title">{{ productdetails.title }}</h5>
-    <p class="card-text">Likes : {{ productdetails.price }}</p>
+    <p class="card-text">Price : {{ productdetails.price }}</p>
+    <p class="card-text"></p>
+    Add to cart : 
+    <input type="checkbox" [(ngModel)]="isAddedToCart" />
     <p class="card-text">
       <app-rating [rating]="productdetails.rating"></app-rating>
     </p>
-    <p class="btn btn-primary">
+    <p class="btn btn-primary" (click)="changeLikes()">
       <i class="fa-regular fa-thumbs-up"></i> {{ productdetails.likes }}
     </p>
   </div>

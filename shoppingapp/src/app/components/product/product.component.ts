@@ -4,6 +4,7 @@ import { ProductModel } from '../../models/product.model';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
+  styleUrl: './product.component.css',
 })
 export class Product {
   @Input() productdetails: ProductModel = new ProductModel(
@@ -14,4 +15,10 @@ export class Product {
     0,
     'NA'
   );
+
+  changeLikes() {
+    this.productdetails.likes++;
+  }
+
+  isAddedToCart: boolean = false;
 }

@@ -34,3 +34,14 @@ be assigned to the variable
 
 ====DAY 3========================================
 create components => ng g c components/<component_name>
+
+Binding => one way and two way
+    one way binding => interpolation and property binding syntax
+    two way binding => [{ngModel}] 
+                        FormsModule => import in app.module.ts for ngModel
+
+[ngClass]
+
+create serve => ng g s service/<service_name>
+
+dependency injection with service
