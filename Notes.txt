@@ -45,3 +45,10 @@ Binding => one way and two way
 create serve => ng g s service/<service_name>
 
 dependency injection with service
+
+====DAY 3========================================
+Promise, async, await
+
+Observables 
+
+RxJS 
