@@ -1,3 +1,11 @@
-.addtocart{
-    background-color: rgb(43, 244, 150);
+.addtocart {
+  background-color: rgb(43, 244, 150);
+}
+
+.outstock {
+  color: red;
+}
+
+.instock {
+  color: green;
 }

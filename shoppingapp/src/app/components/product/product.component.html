@@ -10,8 +10,17 @@
   <div class="card-body">
     <h5 class="card-title">{{ productdetails.title }}</h5>
     <p class="card-text">Price : {{ productdetails.price }}</p>
+    <p
+      class="card-text outstock"
+      *ngIf="productdetails.quantity == 0; else elseBlock"
+    >
+      Out of stock
+    </p>
+    <ng-template #elseBlock
+      ><p class="card-text instock">In stock</p></ng-template
+    >
     <p class="card-text"></p>
-    Add to cart : 
+    Add to cart :
     <input type="checkbox" [(ngModel)]="isAddedToCart" />
     <p class="card-text">
       <app-rating [rating]="productdetails.rating"></app-rating>

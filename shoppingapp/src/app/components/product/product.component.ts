@@ -13,7 +13,8 @@ export class Product {
     0,
     0.0,
     0,
-    'NA'
+    'NA',
+    0
   );
 
   changeLikes() {
