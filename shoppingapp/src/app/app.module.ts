@@ -9,9 +9,10 @@ import { FormsModule } from '@angular/forms';
 import { PostsComponent } from './components/posts/posts.component';
 import { ListOfProducts } from './components/listofproducts/listofproducts.component';
 import { provideHttpClient } from '@angular/common/http';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
-  declarations: [AppComponent, ListOfProducts, Product, RatingComponent, PostsComponent],
+  declarations: [AppComponent, ListOfProducts, Product, RatingComponent, PostsComponent, NavbarComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent],
