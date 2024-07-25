@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ListOfProducts } from './components/listofproducts/listofproducts.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { PostdetailsComponent } from './components/postdetails/postdetails.component';
 
 const routes: Routes = [
   {
@@ -14,8 +15,8 @@ const routes: Routes = [
     component: PostsComponent,
   },
   {
-    path: 'nav',
-    component: NavbarComponent,
+    path: 'postdetails/:id',
+    component: PostdetailsComponent,
   },
 ];
 
