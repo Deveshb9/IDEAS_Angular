@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ProductModel } from '../../models/product.model';
+import { ProductService } from '../../services/products.service';
 
 @Component({
   selector: 'app-product',
@@ -7,6 +8,7 @@ import { ProductModel } from '../../models/product.model';
   styleUrl: './product.component.css',
 })
 export class Product {
+  constructor(public srvInstance: ProductService) {}
   @Input() productdetails: ProductModel = new ProductModel(
     0,
     'NA',
@@ -19,6 +21,10 @@ export class Product {
 
   changeLikes() {
     this.productdetails.likes++;
+  }
+
+  deleteProduct(id: number) {
+    this.srvInstance.deleteProduct(id);
   }
 
   isAddedToCart: boolean = false;

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProductModel } from '../../models/product.model';
 import { ProductService } from '../../services/products.service';
 
@@ -7,9 +7,15 @@ import { ProductService } from '../../services/products.service';
   templateUrl: './listofproducts.component.html',
   providers: [ProductService],
 })
-export class ListOfProducts {
+export class ListOfProducts implements OnInit {
   allProductList: ProductModel[] = [];
-  constructor(public srvInstance: ProductService) {
-    this.allProductList = srvInstance.productslist;
+  constructor(public srvInstance: ProductService) {}
+
+  async ngOnInit() {
+    try {
+      this.allProductList = await this.srvInstance.getAllProducts();
+    } catch (error) {
+      console.log(error);
+    }
   }
 }

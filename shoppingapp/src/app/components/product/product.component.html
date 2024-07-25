@@ -28,5 +28,8 @@
     <p class="btn btn-primary" (click)="changeLikes()">
       <i class="fa-regular fa-thumbs-up"></i> {{ productdetails.likes }}
     </p>
+    <p class="btn btn-danger" (click)="deleteProduct(productdetails.id)">
+      Delete
+    </p>
   </div>
 </div>
