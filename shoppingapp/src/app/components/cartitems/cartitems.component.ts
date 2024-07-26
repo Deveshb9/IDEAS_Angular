@@ -3,12 +3,10 @@ import { ProductModel } from '../../models/product.model';
 import { CartService } from '../../services/cart.service';
 
 @Component({
-  selector: 'app-cart',
-  templateUrl: './cart.component.html',
-  styleUrl: './cart.component.css',
+  selector: 'app-cartitems',
+  templateUrl: './cartitems.component.html',
+  styleUrl: './cartitems.component.css',
 })
-export class CartComponent {
-  count: number = 0;
-  cartproducts: ProductModel[] = [];
+export class CartitemsComponent {
   constructor(public cartService: CartService) {}
 }

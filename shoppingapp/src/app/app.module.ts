@@ -16,6 +16,7 @@ import { PostService } from './services/posts.service';
 import { ProductService } from './services/products.service';
 import { CartComponent } from './components/cart/cart.component';
 import { CartService } from './services/cart.service';
+import { CartitemsComponent } from './components/cartitems/cartitems.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { CartService } from './services/cart.service';
     PostdetailsComponent,
     ProductdetailsComponent,
     CartComponent,
+    CartitemsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideHttpClient(), PostService, ProductService, CartService],
