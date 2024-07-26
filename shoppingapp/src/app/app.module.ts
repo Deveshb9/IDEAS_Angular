@@ -11,9 +11,10 @@ import { ListOfProducts } from './components/listofproducts/listofproducts.compo
 import { provideHttpClient } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PostdetailsComponent } from './components/postdetails/postdetails.component';
+import { ProductdetailsComponent } from './components/productdetails/productdetails.component';
 
 @NgModule({
-  declarations: [AppComponent, ListOfProducts, Product, RatingComponent, PostsComponent, NavbarComponent, PostdetailsComponent],
+  declarations: [AppComponent, ListOfProducts, Product, RatingComponent, PostsComponent, NavbarComponent, PostdetailsComponent, ProductdetailsComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent],

@@ -1,0 +1,8 @@
+<p class="card-text">Title : {{ productdetails.title }}</p>
+<p class="card-text">Price : {{ productdetails.price }}</p>
+<p class="card-text">
+  <app-rating [rating]="productdetails.rating"></app-rating>
+</p>
+<p class="card-text">
+  <i class="fa-regular fa-thumbs-up"></i> {{ productdetails.likes }}
+</p>

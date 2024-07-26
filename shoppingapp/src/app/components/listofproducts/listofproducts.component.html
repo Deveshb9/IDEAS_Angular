@@ -1,8 +1,4 @@
 <div class="row">
-  <app-product
-    *ngFor="let p of allProductList"
-    [productdetails]="p"
-    class="col-md-4"
-  >
+  <app-product *ngFor="let p of allProductList" [product]="p" class="col-md-4">
   </app-product>
 </div>

@@ -1,6 +1,6 @@
 <div [ngClass]="{ card: true, addtocart: isAddedToCart }">
   <img
-    [src]="productdetails.imageurl"
+    [src]="product.imageurl"
     class="card-img-top"
     alt=""
     height="200px"
@@ -8,12 +8,11 @@
   />
 
   <div class="card-body">
-    <h5 class="card-title">{{ productdetails.title }}</h5>
-    <p class="card-text">Price : {{ productdetails.price }}</p>
-    <p
-      class="card-text outstock"
-      *ngIf="productdetails.quantity == 0; else elseBlock"
+    <a routerLink="/productdetails/{{ product.id }}"
+      ><h5 class="card-title">{{ product.title }}</h5></a
     >
+    <p class="card-text">Price : {{ product.price }}</p>
+    <p class="card-text outstock" *ngIf="product.quantity == 0; else elseBlock">
       Out of stock
     </p>
     <ng-template #elseBlock
@@ -23,13 +22,11 @@
     Add to cart :
     <input type="checkbox" [(ngModel)]="isAddedToCart" />
     <p class="card-text">
-      <app-rating [rating]="productdetails.rating"></app-rating>
+      <app-rating [rating]="product.rating"></app-rating>
     </p>
     <p class="btn btn-primary" (click)="changeLikes()">
-      <i class="fa-regular fa-thumbs-up"></i> {{ productdetails.likes }}
+      <i class="fa-regular fa-thumbs-up"></i> {{ product.likes }}
     </p>
-    <p class="btn btn-danger" (click)="deleteProduct(productdetails.id)">
-      Delete
-    </p>
+    <p class="btn btn-danger" (click)="deleteProduct(product.id)">Delete</p>
   </div>
 </div>

@@ -6,6 +6,6 @@ export class ProductModel {
     public rating: number,
     public likes: number,
     public imageurl: string,
-    public quantity: number,
+    public quantity: number
   ) {}
 }

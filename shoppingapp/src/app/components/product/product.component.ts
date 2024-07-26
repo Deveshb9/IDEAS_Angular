@@ -9,7 +9,7 @@ import { ProductService } from '../../services/products.service';
 })
 export class Product {
   constructor(public srvInstance: ProductService) {}
-  @Input() productdetails: ProductModel = new ProductModel(
+  @Input() product: ProductModel = new ProductModel(
     0,
     'NA',
     0,
@@ -20,7 +20,7 @@ export class Product {
   );
 
   changeLikes() {
-    this.productdetails.likes++;
+    this.product.likes++;
   }
 
   deleteProduct(id: number) {

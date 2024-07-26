@@ -16,9 +16,17 @@ export class ProductService {
     });
   }
 
+  getProductById(id: number): Promise<ProductModel> {
+    return new Promise((resolve, reject) => {
+      this.httpclientobj
+        .get<ProductModel>(`http://localhost:3000/products/${id}`)
+        .subscribe((product: ProductModel) => resolve(product));
+    });
+  }
+
   deleteProduct(id: number) {
     this.httpclientobj
-      .delete<ProductModel[]>(`http://localhost:3000/products/${id}`)
+      .delete<ProductModel>(`http://localhost:3000/products/${id}`)
       .subscribe();
   }
 }
