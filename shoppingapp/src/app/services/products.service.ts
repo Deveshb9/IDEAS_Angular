@@ -40,4 +40,14 @@ export class ProductService {
       .delete<ProductModel>(`http://localhost:3000/products/${id}`)
       .subscribe();
   }
+
+  addProduct(product: ProductModel) {
+    return new Promise((resolve, reject) => {
+      this.httpclientobj
+        .post<ProductModel>(`http://localhost:3000/products`, product)
+        .subscribe((product: ProductModel) => {
+          resolve(product);
+        });
+    });
+  }
 }

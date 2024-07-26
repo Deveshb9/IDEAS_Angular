@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Racket",
       "price": 1000,
       "rating": 4,
@@ -10,7 +10,7 @@
       "quantity": 2
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Shuttles",
       "price": 500,
       "rating": 3,
@@ -19,7 +19,7 @@
       "quantity": 4
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Kit bag",
       "price": 2000,
       "rating": 4,
@@ -28,7 +28,7 @@
       "quantity": 0
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Shoes",
       "price": 1050,
       "rating": 2,
@@ -37,12 +37,30 @@
       "quantity": 5
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Grip",
       "price": 250,
       "rating": 5,
       "likes": 300,
       "imageurl": "https://www.yonex.com/media/catalog/product/i/n/int_ac102-60_011-5_1.png?quality=80&fit=bounds&height=819&width=600&canvas=600:819",
+      "quantity": 0
+    },
+    {
+      "id": 6,
+      "title": "Smash",
+      "price": 2343,
+      "rating": 3,
+      "likes": 24345,
+      "imageurl": "https://www.health.com/thmb/kwUwPrBUOM8QOgmwwbpVr2uaFlQ=/4000x0/filters:no_upscale():max_bytes(150000):strip_icc()/Health-GettyImages-1369805081-8814cbaa0961450d83e0a4eaed405a35.jpg",
+      "quantity": 0
+    },
+    {
+      "id": 10,
+      "title": "AnyItem",
+      "price": 2131,
+      "rating": 4,
+      "likes": 12313,
+      "imageurl": "https://blog.playo.co/wp-content/uploads/2017/04/LCW-jump-smash-1-scaled.jpg",
       "quantity": 0
     }
   ]

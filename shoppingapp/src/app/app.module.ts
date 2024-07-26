@@ -17,6 +17,7 @@ import { ProductService } from './services/products.service';
 import { CartComponent } from './components/cart/cart.component';
 import { CartService } from './services/cart.service';
 import { CartitemsComponent } from './components/cartitems/cartitems.component';
+import { TemplatedrivennewproductComponent } from './components/forms/templatedrivennewproduct/templatedrivennewproduct.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { CartitemsComponent } from './components/cartitems/cartitems.component';
     ProductdetailsComponent,
     CartComponent,
     CartitemsComponent,
+    TemplatedrivennewproductComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideHttpClient(), PostService, ProductService, CartService],
