@@ -6,8 +6,7 @@ import { PostService } from '../../services/posts.service';
 @Component({
   selector: 'app-postdetails',
   templateUrl: './postdetails.component.html',
-  styleUrl: './postdetails.component.css',
-  providers: [PostService],
+  styleUrl: './postdetails.component.css'
 })
 export class PostdetailsComponent implements OnInit {
   constructor(public route: ActivatedRoute, public postService: PostService) {}

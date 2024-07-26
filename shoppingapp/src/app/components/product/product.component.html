@@ -1,16 +1,15 @@
 <div [ngClass]="{ card: true, addtocart: isAddedToCart }">
-  <img
-    [src]="product.imageurl"
-    class="card-img-top"
-    alt=""
-    height="200px"
-    width="100px"
-  />
-
+  <a [routerLink]="['/productdetails', product.id]">
+    <img
+      [src]="product.imageurl"
+      class="card-img-top"
+      alt=""
+      height="200px"
+      width="100px"
+    />
+  </a>
   <div class="card-body">
-    <a routerLink="/productdetails/{{ product.id }}"
-      ><h5 class="card-title">{{ product.title }}</h5></a
-    >
+    <h5 class="card-title">{{ product.title }}</h5>
     <p class="card-text">Price : {{ product.price }}</p>
     <p class="card-text outstock" *ngIf="product.quantity == 0; else elseBlock">
       Out of stock
@@ -20,7 +19,11 @@
     >
     <p class="card-text"></p>
     Add to cart :
-    <input type="checkbox" [(ngModel)]="isAddedToCart" />
+    <input
+      type="checkbox"
+      [(ngModel)]="isAddedToCart"
+      (ngModelChange)="addedToCart(isAddedToCart)"
+    />
     <p class="card-text">
       <app-rating [rating]="product.rating"></app-rating>
     </p>

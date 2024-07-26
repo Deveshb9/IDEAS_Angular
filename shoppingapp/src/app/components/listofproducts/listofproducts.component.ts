@@ -5,7 +5,6 @@ import { ProductService } from '../../services/products.service';
 @Component({
   selector: 'app-listofproducts',
   templateUrl: './listofproducts.component.html',
-  providers: [ProductService],
 })
 export class ListOfProducts implements OnInit {
   allProductList: ProductModel[] = [];

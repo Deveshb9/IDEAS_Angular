@@ -1,8 +1,20 @@
-<p class="card-text">Title : {{ productdetails.title }}</p>
-<p class="card-text">Price : {{ productdetails.price }}</p>
-<p class="card-text">
-  <app-rating [rating]="productdetails.rating"></app-rating>
-</p>
-<p class="card-text">
-  <i class="fa-regular fa-thumbs-up"></i> {{ productdetails.likes }}
-</p>
+<div class="row">
+  <div class="col-md-9">
+    <img
+      [src]="productdetails.imageurl"
+      [alt]="productdetails.title"
+      width="100%"
+    />
+  </div>
+  <div class="col-md-3">
+    <h5 class="card-title">{{ productdetails.title }}</h5>
+    <p class="card-text">
+      <app-rating [rating]="productdetails.rating"></app-rating>
+    </p>
+    <p class="card-text">{{ productdetails.price }}</p>
+    <button class="btn btn-primary">
+      {{ productdetails.likes }}
+      <i class="fa-solid fa-thumbs-up"></i>
+    </button>
+  </div>
+</div>

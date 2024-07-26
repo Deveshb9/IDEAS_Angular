@@ -12,16 +12,27 @@ export class ProductService {
     return new Promise((resolve, reject) => {
       this.httpclientobj
         .get<ProductModel[]>('http://localhost:3000/products')
-        .subscribe((products: ProductModel[]) => resolve(products));
+        .subscribe((products: ProductModel[]) => {
+          this.productslist = products;
+          resolve(products);
+        });
     });
   }
 
-  getProductById(id: number): Promise<ProductModel> {
-    return new Promise((resolve, reject) => {
-      this.httpclientobj
-        .get<ProductModel>(`http://localhost:3000/products/${id}`)
-        .subscribe((product: ProductModel) => resolve(product));
-    });
+  // get by Ajax call
+  // getProductById(id: number): Promise<ProductModel> {
+  //   return new Promise((resolve, reject) => {
+  //     this.httpclientobj
+  //       .get<ProductModel>(`http://localhost:3000/products/${id}`)
+  //       .subscribe((product: ProductModel) => resolve(product));
+  //   });
+  // }
+
+  getProductById(productId: number): ProductModel {
+    return (
+      this.productslist.find((product) => product.id === productId) ||
+      new ProductModel()
+    );
   }
 
   deleteProduct(id: number) {

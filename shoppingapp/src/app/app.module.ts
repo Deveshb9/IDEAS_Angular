@@ -12,11 +12,25 @@ import { provideHttpClient } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PostdetailsComponent } from './components/postdetails/postdetails.component';
 import { ProductdetailsComponent } from './components/productdetails/productdetails.component';
+import { PostService } from './services/posts.service';
+import { ProductService } from './services/products.service';
+import { CartComponent } from './components/cart/cart.component';
+import { CartService } from './services/cart.service';
 
 @NgModule({
-  declarations: [AppComponent, ListOfProducts, Product, RatingComponent, PostsComponent, NavbarComponent, PostdetailsComponent, ProductdetailsComponent],
+  declarations: [
+    AppComponent,
+    ListOfProducts,
+    Product,
+    RatingComponent,
+    PostsComponent,
+    NavbarComponent,
+    PostdetailsComponent,
+    ProductdetailsComponent,
+    CartComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [provideHttpClient()],
+  providers: [provideHttpClient(), PostService, ProductService, CartService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
