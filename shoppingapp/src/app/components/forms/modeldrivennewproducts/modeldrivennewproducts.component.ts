@@ -32,6 +32,6 @@ export class ModeldrivennewproductsComponent {
     // console.log(this.newProductForm.value);
     console.log(this.newProduct);
     this.productService.addProduct(this.newProduct);
-    this.router.navigate(['/']);
+    this.router.navigate(['/dashboard']);
   }
 }

@@ -14,6 +14,6 @@ export class TemplatedrivennewproductComponent {
   HandleFormSubmit() {
     console.log(this.newProduct);
     this.productService.addProduct(this.newProduct);
-    this.router.navigate(['/']);
+    this.router.navigate(['/dashboard']);
   }
 }

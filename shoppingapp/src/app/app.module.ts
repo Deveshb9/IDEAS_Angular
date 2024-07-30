@@ -19,6 +19,8 @@ import { CartService } from './services/cart.service';
 import { CartitemsComponent } from './components/cartitems/cartitems.component';
 import { TemplatedrivennewproductComponent } from './components/forms/templatedrivennewproduct/templatedrivennewproduct.component';
 import { ModeldrivennewproductsComponent } from './components/forms/modeldrivennewproducts/modeldrivennewproducts.component';
+import { DashboardComponent } from './components/dashboard/dashboard/dashboard.component';
+import { LoginComponent } from './components/login/login/login.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { ModeldrivennewproductsComponent } from './components/forms/modeldrivenn
     CartitemsComponent,
     TemplatedrivennewproductComponent,
     ModeldrivennewproductsComponent,
+    DashboardComponent,
+    LoginComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [provideHttpClient(), PostService, ProductService, CartService],
