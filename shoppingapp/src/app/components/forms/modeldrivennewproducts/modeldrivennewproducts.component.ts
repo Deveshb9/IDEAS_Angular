@@ -3,6 +3,7 @@ import { ProductModel } from '../../../models/product.model';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ProductService } from '../../../services/products.service';
 import { Router } from '@angular/router';
+import { restrictProductTitleValidator } from './customValidations';
 
 @Component({
   selector: 'app-modeldrivennewproducts',
@@ -15,7 +16,10 @@ export class ModeldrivennewproductsComponent {
 
   newProductForm: FormGroup = new FormGroup({
     id: new FormControl(this.newProduct.id),
-    title: new FormControl(this.newProduct.title, [Validators.required]),
+    title: new FormControl(this.newProduct.title, [
+      Validators.required,
+      restrictProductTitleValidator(/Angular/i),
+    ]),
     price: new FormControl(this.newProduct.price),
     likes: new FormControl(this.newProduct.likes),
     rating: new FormControl(this.newProduct.rating),

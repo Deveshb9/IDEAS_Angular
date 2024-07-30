@@ -20,9 +20,20 @@
       style="color: red"
       *ngIf="
         newProductForm.controls['title'].invalid &&
-        newProductForm.controls['title'].dirty
+        newProductForm.controls['title'].dirty &&
+        newProductForm.controls['title'].value == ''
       "
-    ></p>
+    >
+      The product should not be empty
+    </p>
+    <p
+      style="color: red"
+      *ngIf="
+        newProductForm.controls['title'].hasError('restrictedName')
+      "
+    >
+      Angular cannot be use
+    </p>
     <p>
       <label class="form-label">
         Title :
