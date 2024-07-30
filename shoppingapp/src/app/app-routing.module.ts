@@ -8,6 +8,7 @@ import { CartitemsComponent } from './components/cartitems/cartitems.component';
 import { TemplatedrivennewproductComponent } from './components/forms/templatedrivennewproduct/templatedrivennewproduct.component';
 import { ModeldrivennewproductsComponent } from './components/forms/modeldrivennewproducts/modeldrivennewproducts.component';
 import { DashboardComponent } from './components/dashboard/dashboard/dashboard.component';
+import { LoginComponent } from './components/login/login/login.component';
 
 const routes: Routes = [
   {
@@ -46,7 +47,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: '/login',
+    component: LoginComponent,
   },
 ];
 
