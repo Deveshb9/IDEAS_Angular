@@ -1,5 +1,9 @@
 <div class="d-flex justify-content-center align-items mt-3">
-  <form #f="ngForm" ngNativeValidate (ngSubmit)="HandleFormSubmit()">
+  <form
+    ngNativeValidate
+    [formGroup]="newProductForm"
+    (ngSubmit)="AddNewProduct()"
+  >
     <p>
       <label class="form-label">
         Id :
@@ -12,9 +16,13 @@
         />
       </label>
     </p>
-    <p style="color: red" *ngIf="producttitle.invalid && producttitle.dirty">
-      The productname is required
-    </p>
+    <p
+      style="color: red"
+      *ngIf="
+        newProductForm.controls['title'].invalid &&
+        newProductForm.controls['title'].dirty
+      "
+    ></p>
     <p>
       <label class="form-label">
         Title :
@@ -22,9 +30,7 @@
           type="text"
           class="form-control"
           name="ptitle"
-          [(ngModel)]="newProduct.title"
-          required
-          #producttitle="ngModel"
+          formControlName="title"
         />
       </label>
     </p>
@@ -35,7 +41,7 @@
           type="number"
           class="form-control"
           name="pprice"
-          [(ngModel)]="newProduct.price"
+          formControlName="price"
         />
       </label>
     </p>
@@ -48,7 +54,7 @@
           max="5"
           class="form-control"
           name="prating"
-          [(ngModel)]="newProduct.rating"
+          formControlName="rating"
         />
       </label>
     </p>
@@ -59,7 +65,7 @@
           type="number"
           class="form-control"
           name="plikes"
-          [(ngModel)]="newProduct.likes"
+          formControlName="likes"
         />
       </label>
     </p>
@@ -70,12 +76,14 @@
           type="text"
           class="form-control"
           name="pimageurl"
-          [(ngModel)]="newProduct.imageurl"
+          formControlName="imageurl"
         />
       </label>
     </p>
     <p>
-      <button class="btn btn-success">Add New Product</button>
+      <button class="btn btn-success" [disabled]="!newProductForm.valid">
+        Add New Product
+      </button>
     </p>
   </form>
 </div>

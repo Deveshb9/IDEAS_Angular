@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Product } from './components/product/product.component';
 import { RatingComponent } from './components/rating/rating.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PostsComponent } from './components/posts/posts.component';
 import { ListOfProducts } from './components/listofproducts/listofproducts.component';
 import { provideHttpClient } from '@angular/common/http';
@@ -18,6 +18,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { CartService } from './services/cart.service';
 import { CartitemsComponent } from './components/cartitems/cartitems.component';
 import { TemplatedrivennewproductComponent } from './components/forms/templatedrivennewproduct/templatedrivennewproduct.component';
+import { ModeldrivennewproductsComponent } from './components/forms/modeldrivennewproducts/modeldrivennewproducts.component';
 
 @NgModule({
   declarations: [
@@ -32,8 +33,9 @@ import { TemplatedrivennewproductComponent } from './components/forms/templatedr
     CartComponent,
     CartitemsComponent,
     TemplatedrivennewproductComponent,
+    ModeldrivennewproductsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [provideHttpClient(), PostService, ProductService, CartService],
   bootstrap: [AppComponent],
 })
