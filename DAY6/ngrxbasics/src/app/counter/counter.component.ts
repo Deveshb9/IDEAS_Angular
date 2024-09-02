@@ -15,7 +15,7 @@ export class CounterComponent {
   }
 
   increment() {
-    this.store.dispatch(increment());
+    this.store.dispatch(increment({ incrementBy: 10 }));
   }
 
   decrement() {
