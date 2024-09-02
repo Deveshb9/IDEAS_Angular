@@ -61,3 +61,13 @@ json-server --watch src/app/db/products.json --port 3000
 ====DAY 6========================================
 Template driven and module driven
 ReactiveFormsModule
+
+auth guard
+
+NGRX -
+- Reactive state for angular
+- @ngrx/store
+-  npm install @ngrx/store@latest --save --force
+
+reducer
+
