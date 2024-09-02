@@ -21,6 +21,7 @@ import { TemplatedrivennewproductComponent } from './components/forms/templatedr
 import { ModeldrivennewproductsComponent } from './components/forms/modeldrivennewproducts/modeldrivennewproducts.component';
 import { DashboardComponent } from './components/dashboard/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login/login.component';
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,13 @@ import { LoginComponent } from './components/login/login/login.component';
     LoginComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
-  providers: [provideHttpClient(), PostService, ProductService, CartService],
+  providers: [
+    provideHttpClient(),
+    PostService,
+    ProductService,
+    CartService,
+    UserService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
