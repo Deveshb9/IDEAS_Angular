@@ -9,7 +9,6 @@ import { incrementLikes } from 'src/ngrx/actions/products.actions';
   styleUrls: ['./product.component.css'],
 })
 export class ProductComponent {
-  isAddedToCart: boolean = false;
   @Input() productdetails: ProductModel = new ProductModel(
     0,
     '',
@@ -20,16 +19,11 @@ export class ProductComponent {
     ''
   );
 
-  constructor(public store: Store<{ products: ProductModel }>) {}
+  constructor(public store: Store<{ products: ProductModel[] }>) {}
 
-  ChangeLikes() {
-    // dispatch an action
+ 
+
+  IncrementLikes() {
     this.store.dispatch(incrementLikes(this.productdetails.id));
-  }
-
-  HandleChange(e: any) {
-    if (e.target.checked) {
-      // this.cartSrvObject.addItemToCart(this.productdetails);
-    }
   }
 }

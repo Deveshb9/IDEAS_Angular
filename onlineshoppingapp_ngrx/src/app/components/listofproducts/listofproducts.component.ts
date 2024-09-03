@@ -12,4 +12,8 @@ export class ListofproductsComponent {
   constructor(public store: Store<{ products: any }>) {
     this.products$ = this.store.select('products');
   }
+
+  ngOnInit() {
+    this.store.dispatch({ type: '[App-Products-Component] Load Products' });
+  }
 }
