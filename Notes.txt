@@ -69,7 +69,15 @@ NGRX -
 - @ngrx/store
 -  npm install @ngrx/store@latest --save --force
 
-reducer
+reducer ->
+- To change the state or store 
+- These are pure functions
+- takes two argument -> currentState and actions
+- dispatching an action is calling reducer
 
-actions
+actions -> 
+
+store -> gobal data (Which will be used by all throughout the application)
+         ex: auth
+
 
