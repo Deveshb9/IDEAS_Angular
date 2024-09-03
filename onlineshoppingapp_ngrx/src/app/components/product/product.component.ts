@@ -20,7 +20,7 @@ export class ProductComponent {
     ''
   );
 
-  constructor(public store: Store<{ products: any }>) {}
+  constructor(public store: Store<{ products: ProductModel }>) {}
 
   ChangeLikes() {
     // dispatch an action

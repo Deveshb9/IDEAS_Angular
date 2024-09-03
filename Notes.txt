@@ -80,4 +80,8 @@ actions ->
 store -> gobal data (Which will be used by all throughout the application)
          ex: auth
 
+====DAY 7========================================
 
+ngrx immer
+
+RxJS

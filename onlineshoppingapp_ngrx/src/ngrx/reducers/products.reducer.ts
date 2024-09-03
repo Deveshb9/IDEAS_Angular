@@ -58,19 +58,32 @@ export const intialState = [
   },
 ];
 
+// export const productsReducer = createReducer(
+//   intialState,
+//   on(incrementLikes, (state, { productId }) => {
+//     console.log(productId);
+//     const updatedState = state.map((s) => {
+//       if (s.id === productId) {
+//         return {
+//           ...s,
+//           likes: s.likes + 1,
+//         };
+//       }
+//       return s;
+//     });
+//     return updatedState;
+//   }) // should return a newer state - with incremented Likes
+// );
+
 export const productsReducer = createReducer(
   intialState,
-  on(incrementLikes, (state, { productId }) => {
-    console.log(productId);
-    const updatedState = state.map((s) => {
-      if (s.id === productId) {
-        return {
-          ...s,
-          likes: s.likes + 1,
-        };
-      }
-      return s;
-    });
-    return updatedState;
-  }) // should return a newer state - with incremented Likes
+  on(incrementLikes, (state, action) => {
+    const id = action.payload;
+    const index = state.findIndex((p) => p.id == id);
+    return [
+      ...state.slice(0, index),
+      { ...state[index], likes: state[index].likes + 1 },
+      ...state.slice(index + 1),
+    ];
+  })
 );

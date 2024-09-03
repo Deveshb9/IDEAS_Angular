@@ -3,7 +3,7 @@ import { createAction, props } from '@ngrx/store';
 export const incrementLikes = createAction(
   '[App-Products-Component] IncrementLikes',
   (id) => {
-    return { productId: id };
+    return { payload: id };
   }
   //   props<{ productId: number }>()
 );
