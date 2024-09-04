@@ -14,6 +14,7 @@ import { ProductsEffects } from 'src/ngrx/effects/effects';
 import { ProductService } from './service/products.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CamelCasePipe } from './pipes/camelcasing.pipe';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { CamelCasePipe } from './pipes/camelcasing.pipe';
     IconComponent,
     RatingComponent,
     CamelCasePipe,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,
