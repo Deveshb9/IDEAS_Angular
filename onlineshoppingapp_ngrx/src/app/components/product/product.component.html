@@ -10,7 +10,7 @@
   <div class="card-body">
     <h5 class="card-title">
       <!-- {{ productdetails.title | lowercase | uppercase }} -->
-      {{ productdetails.title | camelcase }}
+      {{ productdetails.title | camelcase : "pascal" : 10 }}
     </h5>
     <p class="card-text">
       <app-rating [rating]="productdetails.rating"></app-rating>

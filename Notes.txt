@@ -85,3 +85,5 @@ store -> gobal data (Which will be used by all throughout the application)
 ngrx immer
 
 RxJS
+
+pipes and directive
